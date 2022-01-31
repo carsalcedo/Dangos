@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/logo.jpg">
+    <title>Dangos Maid Cafe Web Oficial</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <!--header secction-->
+   <header class="header">
+       <a href="#" class="logo"><img src="./assets/logo.jpg" width="100" height="100" alt=""></a>
+
+       <nav class="navbar">
+           <a href="#home">Home</a>
+           <a href="#about">About</a>
+           <a href="#popular">Popular</a>
+           <a href="#menu">Menu</a>
+           <a href="#order">Order</a>
+           <a href="#blogs">Blogs</a>
+       </nav>
+
+       <div class="icons">
+           <div id="menu-btn" class="fas fa-bars"></div>
+           <div id="search-btn" class="fas fa-search"></div>
+           <div id="cart-btn" class="fas fa-shopping-cart"></div>
+           <div id="login-btn" class="fas fa-user"></div>
+       </div>
+   </header>
+   
+ <!--search-form-->
+   <section class="searchFormContainer">
+       <form action="">
+           <input type="search" name="" placeholder="search here" id="search-box">
+           <label for="search-box" class="fas fa-search"></label>
+       </form>
+    </section>
+
+ <!--shopping cart-->
+
+    <section class="shoppingCartContainer">
+        <div class="products-container">
+            <h3 class="title">Shopping Car</h3>
+            <div class="box-container">
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./assets/food7.png" width="100" height="100" alt="">
+                    <div class="content">
+                        <h3>sushi roll</h3>
+                        <span>quantity : </span>
+                        <input type="number" name="" value="1" id="">
+                        <br>
+                        <span>price :</span>
+                        <span class="price">$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./assets/food12.png" width="100" height="100" alt="">
+                    <div class="content">
+                        <h3>vento vetetable</h3>
+                        <span>quantity : </span>
+                        <input type="number" name="" value="1" id="">
+                        <br>
+                        <span>price :</span>
+                        <span class="price">$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./assets/food10.png" width="100" height="100" alt="">
+                    <div class="content">
+                        <h3>sugar té</h3>
+                        <span>quantity : </span>
+                        <input type="number" name="" value="1" id="">
+                        <br>
+                        <span>price :</span>
+                        <span class="price">$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./assets/fodd14.png" width="100" height="100" alt="">
+                    <div class="content">
+                        <h3>big pizza</h3>
+                        <span>quantity : </span>
+                        <input type="number" name="" value="1" id="">
+                        <br>
+                        <span>price :</span>
+                        <span class="price">$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./assets/food6.png" width="100" height="100" alt="">
+                    <div class="content">
+                        <h3>meet mix</h3>
+                        <span>quantity : </span>
+                        <input type="number" name="" value="1" id="">
+                        <br>
+                        <span>price :</span>
+                        <span class="price">$40.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-total">
+            <h3 class="title">Total</h3>
+            <div class="box">
+                <h3 class="subtotal">subtotal : <span>$200</span></h3>
+                <h3 class="total">Total : <span>$220</span></h3>
+                <a href="#" class="btn">proceeed to checkout</a>
+            </div>
+        </div>
+    </section>
+
+    <!--login form-->
+    <div class="loginFormContainer">
+        <form action="">
+            <h3>Login Form</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="password" name="" placeholder="enter your password" id="" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember</label>
+            </div>
+            <input type="submit" value="login now" class="btn">
+            <p>Forget password? <a href="#">click here</a></p>
+            <p>don´t have a account? <a href="#">register</a></p>
+        </form>
+    </div>
+
+    <!--home section-->
+    <section class="home" id="home">
+        <div class="content">
+            <span>Okaeri nasaimase, goshujinsama</span>
+            <h3>Service with frosts and smiles </h3>
+            <p>Maid cafes first appeared permanently in Japan in 2001 in the Tokyo neighborhood of Akihabara 
+               (or "Akiba," the main pilgrimage center for fans of electronics and pop culture), and soon spread throughout the world. country. Today there are so many cafes of this type in Akihabara that they have become one of the peculiarities of the place.</p>
+            <a href="#" class="btn">order now</a>
+        </div>
+
+        <div class="image">
+            <img src="./assets/food2.png" alt="" class="home-img">
+            <img src="./assets/food9.png" alt="" class="home-parallax-img">
+        </div>
+    </section>
+
+    <!--category section-->
+    <section class="category">
+        <a href="#" class="box">
+            <img src="./assets/food15.png" alt="" >
+            <h3>Fast Food</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./assets/food1.png" alt="" >
+            <h3>Combo Ship</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./assets/food16.png" alt="" >
+            <h3>Sause</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./assets/food2.png" alt="" >
+            <h3>sushi</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./assets/food12.png" alt="" >
+            <h3>Meet</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./assets/food10.png" alt="" >
+            <h3>Coffee</h3>
+        </a>
+    </section>
+
+    <!--section About-->
+
+    <section class="about" id="about">
+        <div class="image">
+            <img src="./assets/food20.png" alt="">
+        </div>
+        <div class="content">
+            <span>know about Maid´s Coffe</span>
+            <h3>what to do in a maid cafe?</h3>
+            <p>The Maids prepare your desserts and decorate them with sweet drawings of hearts, kittens, bunnies, bears, and when they deliver it to you, they do it with all their love so that it tastes better. In these cafes there are usually karaokes, 
+                board games and video games for the customer to sing and play with the Maid or their friends</p>
+            <a href="" class="btn">know more</a>
+            <div class="icons-container">
+                <div class="icons">
+                    <img src="./assets/serv2.png" alt="">
+                    <h3>fast delivery</h3>
+                </div>
+                <div class="icons">
+                    <img src="./assets/serv3.png" alt="">
+                    <h3>Pretty Maids</h3>
+                </div>
+                <div class="icons">
+                    <img src="./assets/serv4.png" alt="">
+                    <h3>Shows</h3>
+                </div>
+                <div class="icons">
+                    <img src="./assets/serv1.png" alt="">
+                    <h3>karaoke</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--section popular-->
+
+    <section class="popular" id="popular">
+        <div class="headding">
+            <span>popular food</span>
+            <h3>ñomi ñomi</h3>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./assets/food3.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Ramen</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(40)</span>
+                    </div>
+                    <div class="price">$20.00 <span>$30.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./assets/fodd14.png" alt=""">
+                </div>
+                <div class="content">
+                    <h3>Pizza with pepeeroni</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(40)</span>
+                    </div>
+                    <div class="price">$10.00 <span>$15.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./assets/food5.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Tempura</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(40)</span>
+                    </div>
+                    <div class="price">$10.00 <span>$15.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./assets/food14.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Big Triple Burger</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(40)</span>
+                    </div>
+                    <div class="price">$10.00 <span>$15.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./assets/food11.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Meet Brochetes</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(40)</span>
+                    </div>
+                    <div class="price">$10.00 <span>$15.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./assets/food8.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Vegetables</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(40)</span>
+                    </div>
+                    <div class="price">$5.00 <span>$10.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./assets/food12.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Mix Meet</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(40)</span>
+                    </div>
+                    <div class="price">$20.00 <span>$30.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./assets/food7.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Sushi Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(40)</span>
+                    </div>
+                    <div class="price">$30.00 <span>$35.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--section banner-->
+    <section class="banner">
+        <div class="row-banner">
+            <div class="content">
+                <span>with sause Mitarashi</span>
+                <h3>Dangos</h3>
+                <p>combo 2 Dango Borchete</p>
+                <a href="" class="btn">order now</a>
+            </div>
+        </div>
+        <div class="grid-banner">
+            <div class="grid">
+                <div class="content">
+                    <span>special offer</span>
+                    <h3>50% off</h3>
+                    <a href="" class="btn">order now</a>
+                </div>
+                <img src="./assets/fodd19.jpg" alt="">
+            </div>
+            <div class="grid">
+                <div class="content center">
+                    <span>limited offer</span>
+                    <h3>100% cashback</h3>
+                    <a href="" class="btn">order now</a>
+                </div>
+                <img src="./assets/fodd20.jpg" alt="">
+            </div>
+            <div class="grid">
+                <div class="content">
+                    <span>special offer</span>
+                    <h3>20% extra</h3>
+                    <a href="" class="btn">order now</a>
+                </div>
+                <img src="./assets/fodd21.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!--menu section-->
+    <section class="menu" id="menu">
+
+        <div class="headding">
+            <span>Our Menu</span>
+            <h3>our top dishes</h3>
+        </div>
+
+        <div class="box-container">
+            <a href="" class="box">
+                <img src="./assets/food13.png" alt="">
+                <div class="content">
+                    <h3>burger extra cheese</h3>
+                    <div class="price">$40.00</div>
+                </div>
+            </a>
+            <a href="" class="box">
+                <img src="./assets/fodd14.png" alt="">
+                <div class="content">
+                    <h3>Pizza</h3>
+                    <div class="price">$40.00</div>
+                </div>
+            </a>
+            <a href="" class="box">
+                <img src="./assets/food17.png" alt="">
+                <div class="content">
+                    <h3>sushi & Salmon</h3>
+                    <div class="price">$40.00</div>
+                </div>
+            </a>
+            <a href="" class="box">
+                <img src="./assets/food21.png" alt="">
+                <div class="content">
+                    <h3>Dangos Mitarashi</h3>
+                    <div class="price">$40.00</div>
+                </div>
+            </a>
+            <a href="" class="box">
+                <img src="./assets/food3.png" alt="">
+                <div class="content">
+                    <h3>Ramen</h3>
+                    <div class="price">$40.00</div>
+                </div>
+            </a>
+            <a href="" class="box">
+                <img src="./assets/food22.png" alt="">
+                <div class="content">
+                    <h3>Milk</h3>
+                    <div class="price">$40.00</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!--order section-->
+    <section class="order" id="order">
+        <div class="headding">
+            <span>Order Now</span>
+            <h3>fastest home delivery</h3> 
+        </div>
+        <!--quede en el min 51 del video-->
+    </section>
+
+
+
+
+
+
+
+
+
+
+ <script src="./js/action.js"></script>
+</body>
+</html>

@@ -685,7 +685,6 @@ section{
 
         &:hover{
             background: $yellow;
-
         }
 
         img{
@@ -707,6 +706,275 @@ section{
     }
 }
 
+//styles order section
+
+.order{
+
+    .icons-container{
+        @include grid(30rem);
+        margin-bottom: 2rem;
+
+        .icons{
+            border-radius: .5rem;
+            padding: 2rem;
+            text-align: center;
+            background: $ligth-bg;
+
+            i{
+                font-size: 4rem;
+                color: $red;
+            }
+
+            h3{
+                font-size: 2rem;
+                color: $black;
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    form{
+        background: $ligth-bg;
+        padding: 2rem;
+        border-radius: .5rem;
+
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .inputBox{
+                width: 49%;
+                padding: .7rem 0;
+            }
+
+            span{
+                font-size: 1.7rem;
+                color: $ligth-color;
+            }
+
+            input, textarea{
+                width: 100%;
+                margin-top: .5rem;
+                //width: 100%;
+                padding: 1rem 1.2rem;
+                border-radius: .5rem;
+                font-size: 1.5rem;
+                text-transform: none;
+                color: $black;
+            }
+
+            textarea{
+                height: 20rem;
+                resize: none;
+            }
+
+            .map{
+                height: 100%;
+                width: 100%;
+                border-radius: .5rem;
+            }
+        }
+    }
+}
+
+//styles blogs
+
+.blogs .box-container{
+    @include grid(30rem);
+
+    .box{
+        overflow: hidden;
+        border-radius: .5rem;
+
+        &:hover{
+            .image{
+                img{
+                    transform: scale(1.2);
+                }
+
+                h3{
+                    left: 1.5rem;
+                }
+            }
+        }
+
+        .image{
+            height: 25rem;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+
+            h3{
+                position: absolute;
+                z-index: 10;
+                top: 1rem; left: -100%;
+                border-radius: .5rem;
+                background: $white;
+                color: $black;
+                font-size: 1.5rem;
+                padding: .5rem 1rem;
+
+                i{
+                    padding-right: .5rem;
+                    color: $red;
+                }
+            }
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content{
+            padding: 1.5rem 2rem;
+            background: $ligth-bg;
+
+            .tags{
+                padding-bottom: 1rem;
+                a{
+                    font-size: 1.5rem;
+                    color: $ligth-color;
+
+                    i{
+                        color: $red;
+                    }
+                }
+            }
+
+            h3{
+                font-size: 2rem;
+                color: $black;
+            }
+
+            p{
+                font-size: 1.4rem;
+                color: $black;
+                padding: 1rem 0;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+//styles footer
+
+.footer{
+    padding: 2rem 9%;
+    background: $ligth-bg;
+
+    .newsletter{
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h3{
+            font-size: 2.5rem;
+            color: $black;
+            padding-bottom: 1rem;
+        }
+
+        form{
+            max-width: 70rem;
+            margin: 1rem auto;
+            max-width: 70rem;
+            display: flex;
+            border-radius: .5rem;
+            overflow: hidden;
+
+            input[type="email"]{
+                height: 100%;
+                width: 100%;
+                padding: 1rem 1.2rem;
+                font-size: 1.6rem;
+                color: $black;
+                text-transform: none;
+            }
+
+            input[type="submit"]{
+                padding: 0 2rem;
+                font-size: 1.5rem;
+                color: $black;
+                background: $yellow;
+                cursor: pointer;
+
+                &:hover{
+                    background: $black;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .box-container{
+        @include grid(20rem);
+
+        .box{
+            font-size: 2.2rem;
+            color: $black;
+            padding: 1rem 0;
+        }
+
+        p{
+            font-size: 1.4rem;
+            color: $black;
+            padding: 1rem 0;
+        }
+        a{
+            display: block;
+            font-size: 1.4rem;
+            color: $black;
+            padding: 1rem 0;
+
+            &:hover{
+                color: $red;
+                i{
+                    padding-right: 2rem;
+                }
+            }
+
+            i{
+                padding-right: .5rem;
+                color: $red;
+            }
+        }
+    }
+
+    .bottom{
+        padding-top: 1rem;
+        text-align: center;
+
+        .share{
+            margin: 1.5rem 0;
+
+            a{
+                height: 4.5rem;
+                width: 4.5rem;
+                line-height: 4.5rem;
+                font-size: 2rem;
+                border-radius: .5rem;
+                margin: 0 .3;
+                color: black;
+                background: $yellow;
+
+                &:hover{
+                    background: $black;
+                    color: $white;
+                }
+            }
+        }
+        .credit{
+            font-size: 2rem;
+            color: $ligth-color;
+            padding: 1rem;
+
+            span{
+                color: $red;
+            }
+        }
+    }
+}
 
 
 //MEDIAQUERYS
@@ -733,7 +1001,7 @@ section{
 
     .header{
         padding: .5rem 3%;
-        position: relative;
+       
 
     }
 
@@ -759,6 +1027,10 @@ section{
     .home .home-parallax-img{     
         top: 0rem; right: 0rem;
         width: 130%; 
+    }
+
+    .order form .flex .inputBox{
+        width: 100%;
     }
 }
 

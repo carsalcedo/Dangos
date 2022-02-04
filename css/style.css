@@ -358,7 +358,7 @@ section {
   transition: 0.3s ease all;
 }
 .registerFormContainer form .flex .inputBox .grupo-input input:focus {
-  border: 0.1rem solid #13b613;
+  border: 0.1rem solid #FFD700;
 }
 .registerFormContainer form .flex .inputBox .grupo-input .validacion-estado {
   font-size: 1.5rem;
@@ -420,14 +420,14 @@ section {
   text-align: center;
   margin-bottom: 1rem;
 }
-.registerFormContainer form .btn-enviar p {
+.registerFormContainer form .btn-enviar .mensaje-exito {
   font-size: 2rem;
   color: #13b613;
   outline: none;
   text-align: center;
   display: none;
 }
-.registerFormContainer form .btn-enviar p.active {
+.registerFormContainer form .btn-enviar .mensaje-exito.active {
   display: block;
 }
 

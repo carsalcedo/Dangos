@@ -138,7 +138,7 @@
     <div class="registerFormContainer">
         <form action="" id="formulario">
             <div class="flex">
-                <div class="inputBox" id="usuario">
+                <div class="inputBox" id="grupo__usuario">
                     <label for="usuario" class="label">Your User</label>
                     <div class="grupo-input">
                         <input type="text" name="usuario" id="usuario" placeholder="fersama07" class="input">
@@ -146,7 +146,7 @@
                      </div>
                      <p class="input-error">the username must be from 4 to 16 digits can only contain numbers, letters and underscore</p>
                 </div>
-                <div class="inputBox" id="nombre">
+                <div class="inputBox" id="grupo__nombre">
                     <label for="nombre" class="label">Your Name</label>
                     <div class="grupo-input">
                         <input type="text" name="nombre" id="nombre" placeholder="fernando carrera" class="input">
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="flex">
-                <div class="inputBox" id="password">
+                <div class="inputBox" id="grupo__password">
                     <label for="password" class="label">Password</label>
                     <div class="grupo-input">
                         <input type="password" name="password" id="password" placeholder="*********" class="input">
@@ -164,7 +164,7 @@
                      </div>
                      <p class="input-error">the password must be from 4 to 16 digits</p>
                 </div>
-                <div class="inputBox" id="password2">
+                <div class="inputBox" id="grupo__password2">
                     <label for="password2" class="label">Repeat Password</label>
                     <div class="grupo-input">
                         <input type="password" name="password2" id="password2" placeholder="*********" class="input">
@@ -174,7 +174,7 @@
                 </div>
             </div>
             <div class="flex">
-                <div class="inputBox" id="correo">
+                <div class="inputBox" id="grupo__correo">
                     <label for="correo" class="label">Your Email</label>
                     <div class="grupo-input">
                         <input type="email" name="correo" id="correo" placeholder="email@dominio.com" class="input">
@@ -182,8 +182,8 @@
                      </div>
                      <p class="input-error">the email can only contain numbers, letters and underscore</p>
                 </div>
-                <div class="inputBox" id="telefono">
-                    <label for="telefono" class="label">Your Email</label>
+                <div class="inputBox" id="grupo__telefono">
+                    <label for="telefono" class="label">Your Telephone</label>
                     <div class="grupo-input">
                         <input type="tel" name="telefono" id="telefono" placeholder="+584706464" class="input">
                          <i class="fas fa-times-circle validacion-estado"></i>
@@ -191,7 +191,7 @@
                      <p class="input-error">telephone only must contain numbers and max 14 digits</p>
                 </div>
             </div>
-            <div class="remember" id="terminos">
+            <div class="remember">
                 <label class="label">
                  <input class="checkbox" type="checkbox" name="terminos" id="terminos">
                  I Agree all terms
@@ -203,7 +203,7 @@
             </div>
             
             <div class="btn-enviar">
-                 <button type="submit" value="Register" class="btn">Register</button>
+                 <button type="submit" value="register" class="btn">Register</button>
                  <p class="mensaje-exito" id="mensaje-exito">Register Completed</p>
             </div>
         </form>
@@ -568,11 +568,11 @@
             <div class="flex">
                 <div class="inputBox">
                     <span>your name</span>
-                    <input type="text" name="" id="" placeholder="enter your name">
+                    <input type="text" name="" id="" pattern="[a-zA-Z\s]" placeholder="enter your name" required>
                 </div>
                 <div class="inputBox">
                     <span>your number</span>
-                    <input type="tel" maxlength="8" name="" id="tel" placeholder="enter your number">
+                    <input type="tel" maxlength="8" name="telefono" pattern="[0-9]+" id="tel" placeholder="enter your number" required>
                 </div>
             </div>
 
@@ -583,7 +583,7 @@
                 </div>
                 <div class="inputBox">
                     <span>how much</span>
-                    <input type="number" name="" id="" placeholder="number or orders">
+                    <input type="number" value="1" min="1" name="" id="" placeholder="number or orders">
                 </div>
             </div>
             
@@ -734,5 +734,6 @@
 
 
  <script src="./js/action.js"></script>
+ <script src="./js/formu.js"></script>
 </body>
 </html>

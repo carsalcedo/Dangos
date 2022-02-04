@@ -420,7 +420,7 @@ section{
                         color: $black;
                         transition: .3s ease all;
                         &:focus{
-                            border: .1rem solid rgb(19, 182, 19);
+                            border: .1rem solid $yellow;
                         }
                     }
                     .validacion-estado{
@@ -495,7 +495,7 @@ section{
                 margin-bottom: 1rem;
                // width: 100%;
             }
-            p{
+            .mensaje-exito{
                 font-size: 2rem;
                 color: rgb(19, 182, 19);
                 outline: none;

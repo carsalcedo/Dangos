@@ -243,9 +243,10 @@ section {
   right: 0;
   height: calc(100vh - 8.5rem);
   background: #fff;
-  padding: 0 2rem;
+  padding-bottom: 8rem;
   display: none;
   z-index: 1000;
+  overflow-y: scroll;
 }
 .loginFormContainer.active {
   display: block;
@@ -268,10 +269,10 @@ section {
 .loginFormContainer form .box {
   margin: 0.7rem 0;
   border-radius: 0.5rem;
-  background: #666;
+  background: #f7f7f7;
   padding: 1rem 1.2rem;
   font-size: 1.6rem;
-  color: #fff;
+  color: #130f40;
   text-transform: none;
   width: 100%;
 }
@@ -302,6 +303,132 @@ section {
 .loginFormContainer form p a:hover {
   color: #130f40;
   text-decoration: underline;
+}
+
+.registerFormContainer {
+  padding: 8rem 2rem;
+  position: fixed;
+  top: 14.5rem;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 8.5rem);
+  background: #fff;
+  display: none;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+.registerFormContainer.active {
+  display: block;
+}
+.registerFormContainer form {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  max-width: 80rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  animation: fadeUp 0.4s linear;
+}
+.registerFormContainer form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.registerFormContainer form .flex .inputBox {
+  width: 49%;
+  padding: 0.7rem 0;
+}
+.registerFormContainer form .flex .inputBox label {
+  font-size: 1.7rem;
+  color: #666;
+}
+.registerFormContainer form .flex .inputBox .grupo-input {
+  position: relative;
+}
+.registerFormContainer form .flex .inputBox .grupo-input input {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #f7f7f7;
+  border: 0.1rem solid transparent;
+  padding: 1rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: #130f40;
+  transition: 0.3s ease all;
+}
+.registerFormContainer form .flex .inputBox .grupo-input input:focus {
+  border: 0.1rem solid #13b613;
+}
+.registerFormContainer form .flex .inputBox .grupo-input .validacion-estado {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0.6rem;
+  bottom: 1.2rem;
+  z-index: 100;
+  opacity: 0;
+}
+.registerFormContainer form .flex .inputBox .input-error {
+  margin-bottom: 0;
+  font-size: 1rem;
+  display: none;
+}
+.registerFormContainer form .flex .inputBox .input-error.active {
+  display: block;
+}
+.registerFormContainer form .flex .inputBox.correcto .validacion-estado {
+  color: #13b613;
+  opacity: 1;
+}
+.registerFormContainer form .flex .inputBox.incorrecto label {
+  color: red;
+}
+.registerFormContainer form .flex .inputBox.incorrecto .validacion-estado {
+  color: red;
+  opacity: 1;
+}
+.registerFormContainer form .flex .inputBox.incorrecto input {
+  border: 0.1rem solid red;
+}
+.registerFormContainer form .remember {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.registerFormContainer form .remember label {
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #130f40;
+}
+.registerFormContainer form .mensaje {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+  display: none;
+}
+.registerFormContainer form .mensaje.active {
+  display: block;
+}
+.registerFormContainer form .btn-enviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registerFormContainer form .btn-enviar .btn {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.registerFormContainer form .btn-enviar p {
+  font-size: 2rem;
+  color: #13b613;
+  outline: none;
+  text-align: center;
+  display: none;
+}
+.registerFormContainer form .btn-enviar p.active {
+  display: block;
 }
 
 .home {
@@ -873,6 +1000,11 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .header {
+    padding: 0.5rem 3%;
+    position: sticky;
   }
 
   .shoppingCartContainer .cart-total .box {

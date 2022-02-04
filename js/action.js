@@ -6,6 +6,7 @@ document.querySelector('#search-btn').onclick = () =>{
     cart.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
+    registerForm.classList.remove('active')
 }
 
 /*funcion para aparecer shopping car*/
@@ -16,6 +17,7 @@ document.querySelector('#cart-btn').onclick = () =>{
     searchform.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
+    registerForm.classList.remove('active')
 }
 
 /*funcion para aparecer login form*/
@@ -26,7 +28,18 @@ document.querySelector('#login-btn').onclick = () =>{
     searchform.classList.remove('active');
     cart.classList.remove('active');
     navbar.classList.remove('active');
+    registerForm.classList.remove('active')
 }
+
+/*funcion para aparecer el regiser form*/
+let registerForm = document.querySelector('.registerFormContainer');
+
+document.querySelector('#regForm').onclick = () =>{
+    registerForm.classList.toggle('active')
+}
+
+
+
 
 /*funcion para aparecer menu responsive*/
 
@@ -39,6 +52,7 @@ document.querySelector('#menu-btn').onclick = () => {
     cart.classList.remove('active');
 
 }
+
 
 window.onscroll = () => {
     navbar.classList.remove('active')

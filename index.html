@@ -130,9 +130,85 @@
             </div>
             <input type="submit" value="login now" class="btn">
             <p>Forget password? <a href="#">click here</a></p>
-            <p>don´t have a account? <a href="#">register</a></p>
+            <p>don´t have a account? <a href="#" id="regForm">register</a></p>
         </form>
     </div>
+
+      <!--register form-->
+    <div class="registerFormContainer">
+        <form action="" id="formulario">
+            <div class="flex">
+                <div class="inputBox" id="usuario">
+                    <label for="usuario" class="label">Your User</label>
+                    <div class="grupo-input">
+                        <input type="text" name="usuario" id="usuario" placeholder="fersama07" class="input">
+                        <i class="fas fa-times-circle validacion-estado"></i>
+                     </div>
+                     <p class="input-error">the username must be from 4 to 16 digits can only contain numbers, letters and underscore</p>
+                </div>
+                <div class="inputBox" id="nombre">
+                    <label for="nombre" class="label">Your Name</label>
+                    <div class="grupo-input">
+                        <input type="text" name="nombre" id="nombre" placeholder="fernando carrera" class="input">
+                        <i class="fas fa-times-circle validacion-estado"></i>
+                     </div>
+                     <p class="input-error">the name can only contain letters</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="inputBox" id="password">
+                    <label for="password" class="label">Password</label>
+                    <div class="grupo-input">
+                        <input type="password" name="password" id="password" placeholder="*********" class="input">
+                        <i class="fas fa-times-circle validacion-estado"></i>
+                     </div>
+                     <p class="input-error">the password must be from 4 to 16 digits</p>
+                </div>
+                <div class="inputBox" id="password2">
+                    <label for="password2" class="label">Repeat Password</label>
+                    <div class="grupo-input">
+                        <input type="password" name="password2" id="password2" placeholder="*********" class="input">
+                         <i class="fas fa-times-circle validacion-estado"></i>
+                     </div>
+                     <p class="input-error">Both password must be the same</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="inputBox" id="correo">
+                    <label for="correo" class="label">Your Email</label>
+                    <div class="grupo-input">
+                        <input type="email" name="correo" id="correo" placeholder="email@dominio.com" class="input">
+                         <i class="fas fa-times-circle validacion-estado"></i>
+                     </div>
+                     <p class="input-error">the email can only contain numbers, letters and underscore</p>
+                </div>
+                <div class="inputBox" id="telefono">
+                    <label for="telefono" class="label">Your Email</label>
+                    <div class="grupo-input">
+                        <input type="tel" name="telefono" id="telefono" placeholder="+584706464" class="input">
+                         <i class="fas fa-times-circle validacion-estado"></i>
+                     </div>
+                     <p class="input-error">telephone only must contain numbers and max 14 digits</p>
+                </div>
+            </div>
+            <div class="remember" id="terminos">
+                <label class="label">
+                 <input class="checkbox" type="checkbox" name="terminos" id="terminos">
+                 I Agree all terms
+                </label>
+            </div>
+
+            <div class="mensaje" id="mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i><b> Err</b> Please fill in all the fields correctly</p>
+            </div>
+            
+            <div class="btn-enviar">
+                 <button type="submit" value="Register" class="btn">Register</button>
+                 <p class="mensaje-exito" id="mensaje-exito">Register Completed</p>
+            </div>
+        </form>
+    </div>
+
 
     <!--home section-->
     <section class="home" id="home">
@@ -651,9 +727,6 @@
             <div class="credit">created by <span>ING. Fernando Carrera</span> | all rights reserved 2022</div>
         </div>
     </footer>
-
-
-
 
 
 

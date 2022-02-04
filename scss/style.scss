@@ -182,6 +182,8 @@ section{
     z-index: 1000;
     display: none;
 
+    
+
     &.active{
         display: block;
     }
@@ -293,9 +295,10 @@ section{
     top: 14.5rem; left: 0; right: 0;
     height: calc(100vh - 8.5rem);
     background: $white;
-    padding: 0 2rem;
+    padding-bottom: 8rem;
     display: none;
     z-index: 1000;
+    overflow-y: scroll;
 
     &.active{
         display: block;
@@ -319,10 +322,10 @@ section{
         .box{
             margin: .7rem 0;
             border-radius: .5rem;
-            background: $ligth-color;
+            background: $ligth-bg;
             padding: 1rem 1.2rem;
             font-size: 1.6rem;
-            color: $white;
+            color: $black;
             text-transform: none;
             width: 100%;
         }
@@ -362,6 +365,150 @@ section{
         }
     }
 }
+//styles registerform
+.registerFormContainer{
+    padding: 8rem 2rem;
+    position: fixed;
+    top: 14.5rem; left: 0; right: 0;
+    height: calc(100vh - 8.5rem);
+    background: $white;
+    //padding-bottom: 8rem;
+    display: none;
+    z-index: 1000;
+    overflow-y: scroll;
+    &.active{
+        display: block;
+    }
+
+    form{
+        //background: $ligth-bg;
+        padding: 2rem;
+        border-radius: .5rem;
+        margin: 2rem auto;
+        max-width: 80rem;
+        box-shadow: $box-shadow;
+        border: $border;
+        animation: fadeUp .4s linear;
+       
+        
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .inputBox{
+                width: 49%;
+                padding: .7rem 0;
+
+                label{
+                    font-size: 1.7rem;
+                    color: $ligth-color;
+                }
+
+                .grupo-input{
+                    position: relative;
+
+                    input{
+                        width: 100%;
+                        margin-top: .5rem;
+                        background: $ligth-bg;
+                        border: .1rem solid transparent;
+                        padding: 1rem 1.2rem;
+                        border-radius: .5rem;
+                        font-size: 1.5rem;
+                        text-transform: none;
+                        color: $black;
+                        transition: .3s ease all;
+                        &:focus{
+                            border: .1rem solid rgb(19, 182, 19);
+                        }
+                    }
+                    .validacion-estado{
+                        font-size: 1.5rem;
+                        position: absolute;
+                        right: .6rem; bottom: 1.2rem;
+                        z-index: 100;
+                        opacity: 0;
+                    }
+                }
+                .input-error{
+                    margin-bottom: 0;
+                    font-size: 1rem;
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                }
+
+                &.correcto{
+                    .validacion-estado{
+                        color: rgb(19, 182, 19);
+                        opacity: 1;
+                    }
+                }
+                &.incorrecto{
+                    label{
+                        color: red;
+                    }
+                    .validacion-estado{
+                        color: red;
+                        opacity: 1;
+                    }
+                    input{
+                        border: .1rem solid red
+                    }
+                }
+            }
+            
+        }
+
+        .remember{
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            label{
+                font-size: 1.7rem;
+                cursor: pointer;
+                color: $black;   
+            }
+        }
+
+        .mensaje{
+            padding-top: 1rem;
+            font-size: 1.5rem;
+            color: red;
+            text-align: center;
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+
+        .btn-enviar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .btn{
+                text-align: center;
+                margin-bottom: 1rem;
+               // width: 100%;
+            }
+            p{
+                font-size: 2rem;
+                color: rgb(19, 182, 19);
+                outline: none;
+                text-align: center;
+                display: none;
+                &.active{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 
 //styles section start
 .home{
@@ -756,7 +903,6 @@ section{
             input, textarea{
                 width: 100%;
                 margin-top: .5rem;
-                //width: 100%;
                 padding: 1rem 1.2rem;
                 border-radius: .5rem;
                 font-size: 1.5rem;
@@ -985,6 +1131,7 @@ section{
 
     .header{
         padding: 2rem;
+      //  position: relative;
     }
 
     section{
@@ -1001,8 +1148,7 @@ section{
 
     .header{
         padding: .5rem 3%;
-       
-
+        //position: relative;
     }
 
     .header .navbar{
@@ -1037,6 +1183,11 @@ section{
 
 @media (max-width:450px){
     html{font-size: 50%;
+    }
+
+    .header{
+        padding: .5rem 3%;
+        position: sticky;
     }
 
     .shoppingCartContainer .cart-total{

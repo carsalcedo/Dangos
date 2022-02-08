@@ -32,8 +32,7 @@ const btn = document.getElementById('button');
 document.getElementById('formOrder')
  .addEventListener('submit', function(event) {
    event.preventDefault();
-   document.getElementById('formOrder').reset();
-
+   
    btn.value = 'Sending...';
 
    const serviceID = 'default_service';
@@ -43,6 +42,7 @@ document.getElementById('formOrder')
     .then(() => {
       document.getElementById('mensaje-enviado').classList.add('active');
         btn.value = 'proceed to order';
+        document.getElementById('formOrder').reset();
 
         setTimeout(() => {
             document.getElementById('mensaje-enviado').classList.remove('active');

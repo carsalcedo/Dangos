@@ -778,6 +778,16 @@ section {
   width: 100%;
   border-radius: 0.5rem;
 }
+.order form .mensaje-enviado {
+  font-size: 2rem;
+  color: #13b613;
+  outline: none;
+  text-align: center;
+  display: none;
+}
+.order form .mensaje-enviado.active {
+  display: block;
+}
 
 .blogs .box-container {
   display: grid;

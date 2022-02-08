@@ -920,6 +920,18 @@ section{
                 width: 100%;
                 border-radius: .5rem;
             }
+               
+            }
+            .mensaje-enviado{
+                font-size: 2rem;
+                color: rgb(19, 182, 19);
+                outline: none;
+                text-align: center;
+                display: none;
+                &.active{
+                    display: block;
+                }
+            
         }
     }
 }

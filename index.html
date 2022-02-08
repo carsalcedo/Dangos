@@ -564,50 +564,52 @@
             </div>
         </div>
 
-        <form action="">
+        <form action="" id="formOrder">
             <div class="flex">
                 <div class="inputBox">
                     <span>your name</span>
-                    <input type="text" name="" id="" pattern="[a-zA-Z\s]" placeholder="enter your name" required>
+                    <input type="text" name="name" id="name" placeholder="enter your name" required>
                 </div>
                 <div class="inputBox">
                     <span>your number</span>
-                    <input type="tel" maxlength="8" name="telefono" pattern="[0-9]+" id="tel" placeholder="enter your number" required>
+                    <input type="tel" maxlength="8" name="tel" pattern="[0-9]+" id="tel" placeholder="enter your number" required>
                 </div>
             </div>
 
             <div class="flex">
                 <div class="inputBox">
                     <span>your order</span>
-                    <input type="text" name="" id="" placeholder="food you want">
+                    <input type="text" name="orden" id="orden" placeholder="food you want">
                 </div>
                 <div class="inputBox">
                     <span>how much</span>
-                    <input type="number" value="1" min="1" name="" id="" placeholder="number or orders">
+                    <input type="number" value="1" min="1" name="much" id="much" placeholder="number or orders">
                 </div>
             </div>
             
             <div class="flex">
                 <div class="inputBox">
-                    <span>details</span>
-                    <input type="text" name="" id="" placeholder="your message">
+                    <span>your address</span>
+                    <input type="text" name="address" id="address" placeholder="your message">
                 </div>
                 <div class="inputBox">
                     <span>pick up times</span>
-                    <input type="datetime-local">
+                    <input type="datetime-local" name="dates" id="dates">
                 </div>
             </div>
 
             <div class="flex">
                 <div class="inputBox">
-                    <textarea placeholder="your address" id="" cols="30" rows="10"></textarea>
+                    <textarea placeholder="Details" id="details" name="details" cols="30" rows="10"></textarea>
                 </div>
                 <div class="inputBox">
                     <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.3052086504263!2d-64.18384648488363!3d10.47658856752038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c32718f137fe807%3A0xcb90a5fdca1a72c7!2sClub%20de%20Leones!5e0!3m2!1ses!2sve!4v1643652804276!5m2!1ses!2sve" 
                      allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-            <input type="submit" value="proceed to order" class="btn">
+           <!-- <button type="submit" class="btn">proceed to order</button>-->
+            <input type="submit" id="button" value="proceed to order" class="btn" >
+            <p class="mensaje-enviado" id="mensaje-enviado">Order Sent</p>
             </div>
         </form>
     </section>
@@ -729,11 +731,13 @@
     </footer>
 
 
-
-
-
-
  <script src="./js/action.js"></script>
  <script src="./js/formu.js"></script>
+ <script src="./js/sendOrder.js"></script>
+ <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init('user_hLeb1eNVIsjhN8IFBTNxV')
+</script>
 </body>
 </html>

@@ -19,6 +19,7 @@ $white: #fff;
 $ligth-color: #666;
 $ligth-bg: #f7f7f7;
 $border: .5rem solid rgba(0, 0, 0, .1);
+$borderNg: .5rem solid rgba(213, 226, 26, 0.041);
 $box-shadow: 0 1rem 1rem rgba(0, 0, 0, .05);
 
 @mixin grid($val) {
@@ -31,6 +32,11 @@ $box-shadow: 0 1rem 1rem rgba(0, 0, 0, .05);
     font-family: 'Satisfy', cursive;
     font-size: $size;
     color:$red;
+}
+@mixin font2($size){
+    font-family: 'Satisfy', cursive;
+    font-size: $size;
+    color: red;
 }
 
 html{
@@ -49,6 +55,12 @@ html{
     &::-webkit-scrollbar-thumb{
         background: $yellow;
         border-radius: 5rem;
+    }
+}
+
+body{
+    &.darck{
+        background: black;
     }
 }
 
@@ -82,6 +94,26 @@ section{
     justify-content: space-between;
     padding: .7rem 6%;
 
+    body.darck &{
+        background: $black;
+        a{
+            color: $white;
+            &:hover{
+                color: $yellow
+            }
+        }
+        .icons{
+            div{
+                color: $white;
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+
+        
+    }
+   
     img{
         border-radius:150px;
         margin-right: .5rem;
@@ -113,8 +145,46 @@ section{
             text-align: center;
             &:hover{
                 color: $red;
-                background: $yellow;
             }
+        }
+    }
+    //styles night mode button
+    .switch{
+        background: #343d5b;
+        border-radius: 62.5rem;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        outline: none;
+        &::after{
+            content: "";
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            background: $white;
+            top: 0; left: 0; right: unset;
+            border-radius: 6.2rem;
+            transition: .3s ease all;
+            box-shadow: 0 0 .12rem .12rem rgba(0, 0, 0, .2);
+        }
+        &.active{
+            background: orange;
+            color: $black;
+            &::after{
+                right: 0;
+                left: unset;
+            }
+        }
+        span{
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            display: block;
+            background: none;
+            color: $white;
+
         }
     }
 }
@@ -137,6 +207,23 @@ section{
     background: $white;
     z-index: 2000;
     display: none;
+
+    body.darck &{
+        background: black;
+        form{
+            input{
+                color: $white;
+                background: none;
+                border-bottom: .2rem solid $white;
+            }
+            label{
+                color: $white;
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+    }
 
     &.active{
         display: block;
@@ -182,7 +269,12 @@ section{
     z-index: 1000;
     display: none;
 
-    
+    body.darck &{
+        background: $black;
+        .title{
+            color: $white;
+        }
+    }
 
     &.active{
         display: block;
@@ -272,6 +364,15 @@ section{
         margin-top: 2rem;
         border: $border;
         border-radius: .5rem;
+        body.darck &{
+            border: $white;
+            h3{
+                color: $white;
+                span{
+                    color: red;
+                }
+            }
+        }
 
         .box{
             padding: 1.5rem;
@@ -300,6 +401,10 @@ section{
     z-index: 1000;
     overflow-y: scroll;
 
+    body.darck &{
+        background: $black;
+    }
+
     &.active{
         display: block;
     }
@@ -312,6 +417,23 @@ section{
         padding: 2rem;
         border-radius: .5rem;
         animation: fadeUp .4s linear;
+
+        body.darck &{
+            h3{
+                color: $white;
+            }
+            .remember{
+                label{
+                    color: $white;
+                }
+            }
+            p{
+                color: $white;
+                a{
+                    color: red;
+                }
+            }
+        }
 
         h3{
             padding-bottom: 1rem;
@@ -378,6 +500,17 @@ section{
     overflow-y: scroll;
     &.active{
         display: block;
+    }
+
+    body.darck &{
+        background-color: $black;
+        form{
+           .flex{
+               label{
+                   color: $white;
+               }
+           } 
+        }
     }
 
     form{
@@ -468,6 +601,12 @@ section{
             align-items: center;
             gap: .5rem;
 
+            body.darck &{
+                label{
+                    color: $white;
+                }
+            }
+
             label{
                 font-size: 1.7rem;
                 cursor: pointer;
@@ -519,6 +658,18 @@ section{
     position: relative;
     overflow: hidden;
 
+    body.darck &{
+        span{
+            color: red;
+        }
+        h3{
+            color: #fff;
+        }
+        p{
+            color: $white;
+        }
+    }
+
     .content{
         flex: 1 1 41rem;
 
@@ -567,11 +718,21 @@ section{
     @include grid(16rem);
     padding-bottom: 5rem;
 
+    body.darck &{
+        .box{
+            &:hover{
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+
     .box{
         padding: 2rem;
         text-align: center;
         border-radius: .5rem;
         background: $ligth-bg;
+        color: $black;
 
         &:hover{
             background: $yellow;
@@ -584,7 +745,7 @@ section{
 
         h3{
             font-size: 1.8rem;
-            color: $black;
+            
         }
     }
 }
@@ -596,6 +757,10 @@ section{
     gap: .2rem;
     background: $ligth-bg;
 
+    body.darck &{
+        background: $black;
+    }
+
     .image{
         flex: 1 1 40rem;
 
@@ -606,7 +771,18 @@ section{
 
     .content{
         flex: 1 1 40rem;
-
+        body.darck &{
+            span{
+                @include font2(3rem)
+            }
+            h3{
+                color: $white
+            }
+            p{
+                color: $white
+            }
+        }
+       
         span{
             @include font(3rem);
         }
@@ -626,6 +802,12 @@ section{
             display: flex;
             flex-wrap: wrap;
             gap: 1.5rem;
+
+            body.darck &{
+                .icons{
+                    background: $ligth-bg;
+                }
+            }
 
             .icons{
                 flex: 1 1 20rem;
@@ -1171,8 +1353,12 @@ section{
         border-bottom: $border;
         clip-path: polygon(0 0, 100% 0, 0 0);
 
+
         &.active{
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            body.darck &{
+                background: $black;
+            }
         }
 
         a{

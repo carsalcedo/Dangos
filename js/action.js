@@ -74,5 +74,14 @@ document.querySelector('.home').onmouseleave = () =>{
     translateY(0px)`; 
 }
 
+//night mode function
+
+const btnSwitch = document.querySelector('#switch');
+
+btnSwitch.addEventListener('click', ()=>{
+    document.body.classList.toggle('darck');
+    btnSwitch.classList.toggle('fa-sun')
+    //btnSwitch.classList.toggle('active'); //esta funcion es para el botno desilzante
+})
 
 

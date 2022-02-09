@@ -29,6 +29,10 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
+body.darck {
+  background: black;
+}
+
 section {
   padding: 2rem 9%;
 }
@@ -61,6 +65,21 @@ section {
   justify-content: space-between;
   padding: 0.7rem 6%;
 }
+body.darck .header {
+  background: #130f40;
+}
+body.darck .header a {
+  color: #fff;
+}
+body.darck .header a:hover {
+  color: #FFD700;
+}
+body.darck .header .icons div {
+  color: #fff;
+}
+body.darck .header .icons div:hover {
+  color: #FFD700;
+}
 .header img {
   border-radius: 150px;
   margin-right: 0.5rem;
@@ -86,7 +105,45 @@ section {
 }
 .header .icons div:hover {
   color: #8B0000;
-  background: #FFD700;
+}
+.header .switch {
+  background: #343d5b;
+  border-radius: 62.5rem;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.header .switch::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 6.2rem;
+  transition: 0.3s ease all;
+  box-shadow: 0 0 0.12rem 0.12rem rgba(0, 0, 0, 0.2);
+}
+.header .switch.active {
+  background: orange;
+  color: #130f40;
+}
+.header .switch.active::after {
+  right: 0;
+  left: unset;
+}
+.header .switch span {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  display: block;
+  background: none;
+  color: #fff;
 }
 
 #menu-btn {
@@ -108,6 +165,20 @@ section {
   background: #fff;
   z-index: 2000;
   display: none;
+}
+body.darck .searchFormContainer {
+  background: black;
+}
+body.darck .searchFormContainer form input {
+  color: #fff;
+  background: none;
+  border-bottom: 0.2rem solid #fff;
+}
+body.darck .searchFormContainer form label {
+  color: #fff;
+}
+body.darck .searchFormContainer form label:hover {
+  color: #FFD700;
 }
 .searchFormContainer.active {
   display: block;
@@ -148,6 +219,12 @@ section {
   padding-bottom: 8rem;
   z-index: 1000;
   display: none;
+}
+body.darck .shoppingCartContainer {
+  background: #130f40;
+}
+body.darck .shoppingCartContainer .title {
+  color: #fff;
 }
 .shoppingCartContainer.active {
   display: block;
@@ -224,6 +301,15 @@ section {
   border: 0.5rem solid rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
 }
+body.darck .shoppingCartContainer .cart-total {
+  border: #fff;
+}
+body.darck .shoppingCartContainer .cart-total h3 {
+  color: #fff;
+}
+body.darck .shoppingCartContainer .cart-total h3 span {
+  color: red;
+}
 .shoppingCartContainer .cart-total .box {
   padding: 1.5rem;
 }
@@ -248,6 +334,9 @@ section {
   z-index: 1000;
   overflow-y: scroll;
 }
+body.darck .loginFormContainer {
+  background: #130f40;
+}
 .loginFormContainer.active {
   display: block;
 }
@@ -259,6 +348,18 @@ section {
   padding: 2rem;
   border-radius: 0.5rem;
   animation: fadeUp 0.4s linear;
+}
+body.darck .loginFormContainer form h3 {
+  color: #fff;
+}
+body.darck .loginFormContainer form .remember label {
+  color: #fff;
+}
+body.darck .loginFormContainer form p {
+  color: #fff;
+}
+body.darck .loginFormContainer form p a {
+  color: red;
 }
 .loginFormContainer form h3 {
   padding-bottom: 1rem;
@@ -319,6 +420,12 @@ section {
 }
 .registerFormContainer.active {
   display: block;
+}
+body.darck .registerFormContainer {
+  background-color: #130f40;
+}
+body.darck .registerFormContainer form .flex label {
+  color: #fff;
 }
 .registerFormContainer form {
   padding: 2rem;
@@ -396,6 +503,9 @@ section {
   align-items: center;
   gap: 0.5rem;
 }
+body.darck .registerFormContainer form .remember label {
+  color: #fff;
+}
 .registerFormContainer form .remember label {
   font-size: 1.7rem;
   cursor: pointer;
@@ -439,6 +549,15 @@ section {
   position: relative;
   overflow: hidden;
 }
+body.darck .home span {
+  color: red;
+}
+body.darck .home h3 {
+  color: #fff;
+}
+body.darck .home p {
+  color: #fff;
+}
 .home .content {
   flex: 1 1 41rem;
 }
@@ -480,11 +599,16 @@ section {
   gap: 1.5rem;
   padding-bottom: 5rem;
 }
+body.darck .category .box:hover {
+  background: #130f40;
+  color: #fff;
+}
 .category .box {
   padding: 2rem;
   text-align: center;
   border-radius: 0.5rem;
   background: #f7f7f7;
+  color: #130f40;
 }
 .category .box:hover {
   background: #FFD700;
@@ -494,7 +618,6 @@ section {
 }
 .category .box h3 {
   font-size: 1.8rem;
-  color: #130f40;
 }
 
 .about {
@@ -504,6 +627,9 @@ section {
   gap: 0.2rem;
   background: #f7f7f7;
 }
+body.darck .about {
+  background: #130f40;
+}
 .about .image {
   flex: 1 1 40rem;
 }
@@ -512,6 +638,17 @@ section {
 }
 .about .content {
   flex: 1 1 40rem;
+}
+body.darck .about .content span {
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
+  color: red;
+}
+body.darck .about .content h3 {
+  color: #fff;
+}
+body.darck .about .content p {
+  color: #fff;
 }
 .about .content span {
   font-family: "Satisfy", cursive;
@@ -533,6 +670,9 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+}
+body.darck .about .content .icons-container .icons {
+  background: #f7f7f7;
 }
 .about .content .icons-container .icons {
   flex: 1 1 20rem;
@@ -990,6 +1130,9 @@ section {
   }
   .header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  body.darck .header .navbar.active {
+    background: #130f40;
   }
   .header .navbar a {
     font-size: 2rem;

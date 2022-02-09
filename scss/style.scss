@@ -838,6 +838,15 @@ section{
     text-align: center;
     padding-bottom: 2rem;
 
+    body.darck &{
+        span{
+            @include font2(3rem)
+        }
+        h3{
+            color: $white
+        }
+    }
+
     span{
         @include font(3rem);
     }
@@ -860,6 +869,10 @@ section{
         padding: 2rem;
         text-align: center;
 
+        body.darck &{
+            background: $black; 
+        }
+
         .fa-heart{
             position: absolute;
             top: 1.5rem; right: 1.5rem;
@@ -881,6 +894,23 @@ section{
         }
 
         .content{
+            body.darck &{
+                h3{
+                    color: $white;
+                }
+                .stars{
+                    span{
+                        color: aliceblue;
+                    }
+                }
+                .price{
+                    color: $white;
+                    span{
+                        color: aliceblue;
+                    }
+                }
+            }
+
             h3{
                 font-size: 2rem;
                 color: $black;
@@ -1014,6 +1044,16 @@ section{
 
         &:hover{
             background: $yellow;
+            body.darck &{
+                background: $black;
+                .content h3{
+                    color: $white;
+                }
+                .content .price{
+                    color: red;
+                }
+
+            }
         }
 
         img{
@@ -1043,6 +1083,19 @@ section{
         @include grid(30rem);
         margin-bottom: 2rem;
 
+        body.darck &{
+            .icons{
+                background: $black;
+                i{
+                    color: red;
+                }
+                h3{
+                    color: $white;
+                }
+
+            }
+        }
+
         .icons{
             border-radius: .5rem;
             padding: 2rem;
@@ -1066,6 +1119,12 @@ section{
         background: $ligth-bg;
         padding: 2rem;
         border-radius: .5rem;
+        body.darck &{
+            background: $black;
+            span{
+                color: $white;
+            }
+        }
 
         .flex{
             display: flex;
@@ -1171,6 +1230,23 @@ section{
         .content{
             padding: 1.5rem 2rem;
             background: $ligth-bg;
+            body.darck &{
+                background: $black;
+                .tags{
+                    a{
+                        color: aliceblue;
+                        i{
+                            color: $yellow;
+                        }
+                    }
+                }
+                h3{
+                    color: $white;
+                }
+                p{
+                    color: $white;
+                }
+            }
 
             .tags{
                 padding-bottom: 1rem;
@@ -1204,10 +1280,18 @@ section{
 .footer{
     padding: 2rem 9%;
     background: $ligth-bg;
+    body.darck &{
+        background: $black;
+    }
 
     .newsletter{
         text-align: center;
         margin-bottom: 2rem;
+        body.darck &{
+            h3{
+                color: $white;
+            }
+        }
 
         h3{
             font-size: 2.5rem;
@@ -1249,6 +1333,26 @@ section{
 
     .box-container{
         @include grid(20rem);
+        body.darck &{
+            .box{
+                color: $white;
+            }
+            p{
+                color: $white;
+            }
+            a{
+                color: $white;
+                &:hover{
+                    color: $yellow;
+                    i{
+                        padding-right: 2rem;
+                    }
+                }
+                i{
+                    color: red;
+                }
+            }
+        }
 
         .box{
             font-size: 2.2rem;

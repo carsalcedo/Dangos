@@ -696,6 +696,14 @@ body.darck .about .content .icons-container .icons {
   text-align: center;
   padding-bottom: 2rem;
 }
+body.darck .headding span {
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
+  color: red;
+}
+body.darck .headding h3 {
+  color: #fff;
+}
 .headding span {
   font-family: "Satisfy", cursive;
   font-size: 3rem;
@@ -718,6 +726,9 @@ body.darck .about .content .icons-container .icons {
   padding: 2rem;
   text-align: center;
 }
+body.darck .popular .box-container .box {
+  background: #130f40;
+}
 .popular .box-container .box .fa-heart {
   position: absolute;
   top: 1.5rem;
@@ -734,6 +745,18 @@ body.darck .about .content .icons-container .icons {
 }
 .popular .box-container .box .image img {
   height: 15rem;
+}
+body.darck .popular .box-container .box .content h3 {
+  color: #fff;
+}
+body.darck .popular .box-container .box .content .stars span {
+  color: aliceblue;
+}
+body.darck .popular .box-container .box .content .price {
+  color: #fff;
+}
+body.darck .popular .box-container .box .content .price span {
+  color: aliceblue;
 }
 .popular .box-container .box .content h3 {
   font-size: 2rem;
@@ -848,6 +871,15 @@ body.darck .about .content .icons-container .icons {
 .menu .box-container .box:hover {
   background: #FFD700;
 }
+body.darck .menu .box-container .box:hover {
+  background: #130f40;
+}
+body.darck .menu .box-container .box:hover .content h3 {
+  color: #fff;
+}
+body.darck .menu .box-container .box:hover .content .price {
+  color: red;
+}
 .menu .box-container .box img {
   height: 10rem;
 }
@@ -866,6 +898,15 @@ body.darck .about .content .icons-container .icons {
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
+}
+body.darck .order .icons-container .icons {
+  background: #130f40;
+}
+body.darck .order .icons-container .icons i {
+  color: red;
+}
+body.darck .order .icons-container .icons h3 {
+  color: #fff;
 }
 .order .icons-container .icons {
   border-radius: 0.5rem;
@@ -886,6 +927,12 @@ body.darck .about .content .icons-container .icons {
   background: #f7f7f7;
   padding: 2rem;
   border-radius: 0.5rem;
+}
+body.darck .order form {
+  background: #130f40;
+}
+body.darck .order form span {
+  color: #fff;
 }
 .order form .flex {
   display: flex;
@@ -974,6 +1021,21 @@ body.darck .about .content .icons-container .icons {
   padding: 1.5rem 2rem;
   background: #f7f7f7;
 }
+body.darck .blogs .box-container .box .content {
+  background: #130f40;
+}
+body.darck .blogs .box-container .box .content .tags a {
+  color: aliceblue;
+}
+body.darck .blogs .box-container .box .content .tags a i {
+  color: #FFD700;
+}
+body.darck .blogs .box-container .box .content h3 {
+  color: #fff;
+}
+body.darck .blogs .box-container .box .content p {
+  color: #fff;
+}
 .blogs .box-container .box .content .tags {
   padding-bottom: 1rem;
 }
@@ -999,9 +1061,15 @@ body.darck .about .content .icons-container .icons {
   padding: 2rem 9%;
   background: #f7f7f7;
 }
+body.darck .footer {
+  background: #130f40;
+}
 .footer .newsletter {
   text-align: center;
   margin-bottom: 2rem;
+}
+body.darck .footer .newsletter h3 {
+  color: #fff;
 }
 .footer .newsletter h3 {
   font-size: 2.5rem;
@@ -1039,6 +1107,24 @@ body.darck .about .content .icons-container .icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1.5rem;
+}
+body.darck .footer .box-container .box {
+  color: #fff;
+}
+body.darck .footer .box-container p {
+  color: #fff;
+}
+body.darck .footer .box-container a {
+  color: #fff;
+}
+body.darck .footer .box-container a:hover {
+  color: #FFD700;
+}
+body.darck .footer .box-container a:hover i {
+  padding-right: 2rem;
+}
+body.darck .footer .box-container a i {
+  color: red;
 }
 .footer .box-container .box {
   font-size: 2.2rem;

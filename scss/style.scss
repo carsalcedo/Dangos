@@ -201,9 +201,9 @@ section{
 }
 
 .searchFormContainer{
-    position: fixed;
-    top: 14.5rem; left: 0; right: 0;
-    height: calc(100vh - 8.5rem);
+    position: sticky;
+    top: 12.5rem; left: 0; right: 0;
+    //height: calc(100vh - 8.5rem);
     background: $white;
     z-index: 2000;
     display: none;
@@ -411,7 +411,7 @@ section{
 
     form{
         margin: 2rem auto;
-        max-width: 40rem;
+        max-width: 30rem;
         box-shadow: $box-shadow;
         border: $border;
         padding: 2rem;

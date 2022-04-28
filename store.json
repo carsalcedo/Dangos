@@ -1,0 +1,58 @@
+[
+    {
+      "precio": 20,
+      "id": 1,
+      "title": "Ramen",
+      "thumbnailUrl": "https://i.postimg.cc/cHfjzpsM/food3.png",
+      "descPrecio": 25
+    },
+    {
+      "precio": 10,
+      "id": 2,
+      "title": "Pizza With Pepeeroni",
+      "thumbnailUrl": "https://i.postimg.cc/g0ZBwC6F/fodd14.png",
+      "descPrecio": 15
+    },
+    {
+      "precio": 10,
+      "id": 3,
+      "title": "Tempura",
+      "thumbnailUrl": "https://i.postimg.cc/fT54DQY8/food5.png",
+      "descPrecio": 15
+    },
+    {
+      "precio": 20,
+      "id": 4,
+      "title": "Big Triple Burger",
+      "thumbnailUrl": "https://i.postimg.cc/76p7WLHb/food14.png",
+      "descPrecio": 25
+    },
+    {
+      "precio": 10,
+      "id": 5,
+      "title": "Meet Brochetes",
+      "thumbnailUrl": "https://i.postimg.cc/ncN4sCKr/food11.png",
+      "descPrecio": 15
+    },
+    {
+      "precio": 5,
+      "id": 6,
+      "title": "Vegetables",
+      "thumbnailUrl": "https://i.postimg.cc/gJp4xnW8/food8.png",
+      "descPrecio": 8
+    },
+    {
+      "precio": 20,
+      "id": 7,
+      "title": "VMix Meet",
+      "thumbnailUrl": "https://i.postimg.cc/0NS9C5BV/food12.png",
+      "descPrecio": 25
+    },
+    {
+      "precio": 30,
+      "id": 8,
+      "title": "Sushi Roll",
+      "thumbnailUrl": "https://i.postimg.cc/mk2wSJhr/food7.png",
+      "descPrecio": 25
+    }
+  ]

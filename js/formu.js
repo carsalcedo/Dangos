@@ -1,12 +1,15 @@
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
+
 //form regiser validation
 
 const formulario = document.getElementById('formulario');
+const formuLogin = document.getElementById('formuLogin')
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
+	password: /^.{6,12}$/, // 6 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
@@ -83,6 +86,23 @@ const validarPassword2 = () => {
 	}
 }
 
+//funcion registrar
+function register(){
+	let email = document.getElementById('correo').value;
+	let password = document.getElementById('password').value;
+	const auth = getAuth();
+		createUserWithEmailAndPassword(auth, email, password)
+		.then((userCredential) => {
+			// Signed in 
+			const user = userCredential.user;
+			// ...
+		})
+		.catch((error) => {
+			const errorCode = error.code;
+			const errorMessage = error.message;
+			// ..
+		});
+}
 
 //Button submit validation
 inputs.forEach((input) => {
@@ -96,6 +116,7 @@ formulario.addEventListener('submit', (e) => {
 	const terminos = document.getElementById('terminos');
 
 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
+		register();
 		formulario.reset();
 
 		document.getElementById('mensaje-exito').classList.add('active');
@@ -113,3 +134,34 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('mensaje').classList.add('active');
 	}
 });
+
+//funciion login
+
+function login(){
+	let emailR = document.getElementById('email').value;
+	let passwordR = document.getElementById('pass').value;
+	const auth = getAuth();
+	signInWithEmailAndPassword(auth, emailR, passwordR)
+	.then((userCredential) => {
+		// Signed in 
+		const user = userCredential.user;
+		console.log(user)
+		// ...
+	})
+	.catch((error) => {
+		const errorCode = error.code;
+		const errorMessage = error.message;
+		console.log(errorCode);
+		console.log(errorMessage)
+	});
+	}
+
+	formuLogin.addEventListener('submit', (e) => {
+		login();
+		loginForm.classList.remove('active');
+	})
+
+
+
+
+
